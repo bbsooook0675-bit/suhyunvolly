@@ -1,14 +1,72 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배구 수업 연결 서비스</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>노트북 픽 (Laptop Pick)</span>
+            </div>
+            <nav>
+                <button id="reset-compare">비교 초기화</button>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>당신에게 맞는 최고의 노트북을 찾아보세요</h1>
+            <p>다양한 브랜드의 노트북 스펙을 한눈에 비교하고 결정하세요.</p>
+        </section>
+
+        <main>
+            <div class="filter-bar">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="laptop-search" placeholder="모델명 검색...">
+                </div>
+                <div class="brand-filters">
+                    <button class="filter-btn active" data-brand="all">전체</button>
+                    <button class="filter-btn" data-brand="Apple">Apple</button>
+                    <button class="filter-btn" data-brand="Samsung">삼성</button>
+                    <button class="filter-btn" data-brand="LG">LG</button>
+                </div>
+            </div>
+
+            <div class="comparison-tray" id="comparison-tray">
+                <div class="tray-header">비교하기 (<span id="compare-count">0</span>/2)</div>
+                <div class="tray-items" id="tray-items">
+                    <!-- 비교 아이템이 여기에 추가됩니다 -->
+                </div>
+                <button id="start-compare-btn" disabled>비교 시작</button>
+            </div>
+
+            <div class="laptop-grid" id="laptop-grid">
+                <!-- 노트북 카드가 JavaScript로 생성됩니다 -->
+            </div>
+        </main>
+
+        <div id="compare-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>상세 스펙 비교</h2>
+                <div class="compare-table-container">
+                    <table id="compare-table">
+                        <!-- 비교 테이블 내용 -->
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Laptop Pick. 모든 가격은 실시간 변동될 수 있습니다.</p>
+        </footer>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
