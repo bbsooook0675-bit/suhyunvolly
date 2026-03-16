@@ -73,3 +73,11 @@ filterBtns.forEach(btn => {
         }
     });
 });
+
+// 제휴 문의 폼 초기화 (뒤로가기 등으로 페이지가 다시 표시될 때 입력 내용 삭제)
+window.addEventListener('pageshow', (event) => {
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.reset();
+    }
+});
