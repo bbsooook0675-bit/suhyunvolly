@@ -177,14 +177,20 @@ footer {
     border-top: 1px solid var(--border-color);
     color: var(--secondary-color);
 }
-
 .contact-section {
     padding: 60px 0;
     display: flex;
     justify-content: center;
 }
 
+.comments-section {
+    padding: 40px 0;
+    margin-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
 .contact-card {
+...
     background-color: var(--card-bg);
     border-radius: 20px;
     padding: 40px;
